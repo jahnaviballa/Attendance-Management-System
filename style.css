@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container, .dashboard, .login-container {
+    max-width: 700px;
+    width: 100%;
+    padding: 60px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.college-logo {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.college-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 6px;
+    text-align: left;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+select, input, button {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background-color: #0a9396;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+padding:15px;
+}
+
+button:hover {
+    background-color: #0a9396;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.attendance-form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.attendance-form select, .attendance-form input {
+    width: 45%;
+padding:15px;
+font-size:18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    height: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px; /* Increased padding for table cells */
+    text-align: center;
+    font-size: 18px; /* Larger font size for table cells */
+   }

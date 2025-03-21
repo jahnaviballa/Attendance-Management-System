@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRKR Attendance Management</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <!-- College Name & Logo -->
+    <div id="selectionPage" class="container">
+        <div class="logo-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyz3_zGwwpSNN3RKWxTvnZSjhX4wK3210HXg&s" alt="College Logo" class="college-logo">
+            <div class="college-name">Sagi RamaKrishnam Raju Engineering College</div>
+        </div>
+
+        <select id="userType">
+            <option value="">-- Select User Type --</option>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+        </select>
+        <button onclick="redirectUser()">Proceed</button>
+    </div>
+
+    <!-- Student Login Page -->
+    <div id="studentLogin" class="login-container" style="display: none;">
+        <h2>Student Login</h2>
+        <input type="text" id="studentRegNo" placeholder="Registration Number" required>
+        <input type="password" id="studentPassword" placeholder="Password" required>
+        <a href="#" class="forgot-password">Forgot Your Password?</a>
+        <button onclick="showStudentDashboard()">Login</button>
+    </div>
+
+    <!-- Faculty Login Page -->
+    <div id="facultyLogin" class="login-container" style="display: none;">
+        <h2>Faculty Login</h2>
+        <input type="text" id="facultyUsername" placeholder="Username" required>
+        <input type="password" id="facultyPassword" placeholder="Password" required>
+        <a href="#" class="forgot-password">Forgot Your Password?</a>
+        <button onclick="showFacultyDashboard()">Login</button>
+    </div>
+
+    <!-- Student Dashboard -->
+    <div id="studentDashboard" class="dashboard" style="display: none;">
+        <header>
+            <h1>Student Attendance</h1>
+        </header>
+        <div class="attendance-summary">
+            <p><strong>Attendance Percentage:</strong> 85%</p>
+            <p><strong>Classes Held:</strong> 50</p>
+            <p><strong>Classes Attended:</strong> 43</p>
+        </div>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Period 1</th>
+                <th>Period 2</th>
+                <th>Period 3</th>
+                <th>Period 4</th>
+                <th>Period 5</th>
+                <th>Period 6</th>
+            </tr>
+            <tr>
+                <td>20 Mar</td>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>❌</td>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td>21 Mar</td>
+                <td>✔️</td>
+                <td>❌</td>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Faculty Dashboard -->
+<div id="facultyDashboard" class="dashboard" style="display: none;">
+    <h1>Faculty Attendance Management</h1>
+
+    <!-- Attendance Form -->
+    <div class="attendance-form">
+        <select id="facultySubject">
+            <option value="">Select Subject</option>
+            <option value="subject1">Subject 1</option>
+            <option value="subject2">Subject 2</option>
+            <option value="subject3">Subject 3</option>
+        </select>
+        <select id="facultyPeriod">
+            <option value="">Select Period</option>
+            <option value="period1">Period 1</option>
+            <option value="period2">Period 2</option>
+            <option value="period3">Period 3</option>
+            <option value="period4">Period 4</option>
+            <option value="period5">Period 5</option>
+            <option value="period6">Period 6</option>
+            <option value="period7">Period 7</option>
+            <option value="period8">Period 8</option>
+        </select>
+
+        <!-- New Year Dropdown -->
+        <select id="facultyYear">
+            <option value="">Select Year</option>
+            <option value="1st">1st Year</option>
+            <option value="2nd">2nd Year</option>
+            <option value="3rd">3rd Year</option>
+            <option value="4th">4th Year</option>
+        </select>
+    </div>
+
+    <!-- Attendance Table -->
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Attendance</th>
+        </tr>
+        <tr>
+            <td>Student 1</td>
+            <td>
+                <select>
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Student 2</td>
+            <td>
+                <select>
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <button onclick="saveAttendance()">Save Attendance</button>
+</div>
+
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+
+</body>
+</html>
